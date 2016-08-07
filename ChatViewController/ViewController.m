@@ -20,8 +20,6 @@ static NSString *const search_reuse_id = @"search_reuse_id";
 
 @property (nonatomic,strong) NSMutableArray *resultArray;
 
-@property (nonatomic,strong) UISearchController *searchVC;
-
 @end
 
 @implementation ViewController
@@ -34,9 +32,9 @@ static NSString *const search_reuse_id = @"search_reuse_id";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     //设置搜索条
-    self.searchVC = [ZHSearchResultViewController searchControllerWithDelegate:self];
+    UISearchController *searchVC = [ZHSearchResultViewController searchControllerWithDelegate:self];
     
-    self.tableView.tableHeaderView = self.searchVC.searchBar;
+    self.tableView.tableHeaderView = searchVC.searchBar;
     
     //生成测试数据
     self.dataSource = [NSMutableArray array];

@@ -34,8 +34,6 @@
 
 @interface ZHSearchResultViewController : UIViewController <UISearchBarDelegate,UISearchResultsUpdating>
 
-//@property (nonatomic,strong) UISearchController *searchVC;
-
 @property (nonatomic,strong) UITableView *tableView;
 
 @property (nonatomic,weak) id<SearchResultViewControllerDelegate> delegate;
