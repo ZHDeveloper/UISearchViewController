@@ -4,10 +4,10 @@
 ### 使用方法
 
 	1、初始化
-    //设置搜索条
-    UISearchController *searchVC = [ZHSearchResultViewController searchControllerWithDelegate:self];
+        //设置搜索条
+        self.searchControl = [ZHSearchResultViewController searchControllerWithDelegate:self];
     
-    self.tableView.tableHeaderView = searchVC.searchBar;
+        self.tableView.tableHeaderView = self.searchControl.searchBar;
 
 	2、设置代理属性
 	#pragma mark - SearchResultViewControllerDelegate
