@@ -22,7 +22,6 @@ static NSString *const search_reuse_id = @"search_reuse_id";
 
 @property (nonatomic,strong) UISearchController *searchControl;
 
-
 @end
 
 @implementation ViewController
@@ -38,7 +37,7 @@ static NSString *const search_reuse_id = @"search_reuse_id";
     self.searchControl = [ZHSearchResultViewController searchControllerWithDelegate:self];
     
     self.tableView.tableHeaderView = self.searchControl.searchBar;
-    
+
     //生成测试数据
     self.dataSource = [NSMutableArray array];
     
